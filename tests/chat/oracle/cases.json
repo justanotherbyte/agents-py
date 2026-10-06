@@ -1,0 +1,1964 @@
+{
+ "builder": [
+  {
+   "name": "text",
+   "chunks": [
+    {
+     "type": "text-start",
+     "id": "t"
+    },
+    {
+     "type": "text-delta",
+     "id": "t",
+     "delta": "Hello"
+    },
+    {
+     "type": "text-end",
+     "id": "t"
+    },
+    {
+     "type": "text-start",
+     "id": "t2"
+    },
+    {
+     "type": "text-delta",
+     "id": "t2",
+     "delta": " again"
+    },
+    {
+     "type": "text-end",
+     "id": "t2"
+    }
+   ],
+   "parts": []
+  },
+  {
+   "name": "text_delta_without_start",
+   "chunks": [
+    {
+     "type": "text-delta",
+     "id": "t",
+     "delta": "x"
+    }
+   ],
+   "parts": []
+  },
+  {
+   "name": "text_end_without_part",
+   "chunks": [
+    {
+     "type": "text-end",
+     "id": "t"
+    }
+   ],
+   "parts": []
+  },
+  {
+   "name": "empty_delta",
+   "chunks": [
+    {
+     "type": "text-start",
+     "id": "t"
+    },
+    {
+     "type": "text-delta",
+     "id": "t"
+    }
+   ],
+   "parts": []
+  },
+  {
+   "name": "reasoning_metadata",
+   "chunks": [
+    {
+     "type": "reasoning-start",
+     "id": "r"
+    },
+    {
+     "type": "reasoning-delta",
+     "id": "r",
+     "delta": "think",
+     "providerMetadata": {
+      "a": {
+       "x": 1
+      }
+     }
+    },
+    {
+     "type": "reasoning-end",
+     "id": "r",
+     "providerMetadata": {
+      "b": {
+       "sig": "s"
+      }
+     }
+    }
+   ],
+   "parts": []
+  },
+  {
+   "name": "reasoning_delta_without_start",
+   "chunks": [
+    {
+     "type": "reasoning-delta",
+     "id": "r",
+     "delta": "x",
+     "providerMetadata": {
+      "a": {}
+     }
+    }
+   ],
+   "parts": []
+  },
+  {
+   "name": "reasoning_end_no_metadata",
+   "chunks": [
+    {
+     "type": "reasoning-start",
+     "id": "r"
+    },
+    {
+     "type": "reasoning-end",
+     "id": "r"
+    }
+   ],
+   "parts": []
+  },
+  {
+   "name": "file_and_sources",
+   "chunks": [
+    {
+     "type": "file",
+     "url": "data:image/png;base64,AA",
+     "mediaType": "image/png"
+    },
+    {
+     "type": "source-url",
+     "sourceId": "s1",
+     "url": "https://x.dev",
+     "title": "X"
+    },
+    {
+     "type": "source-url",
+     "sourceId": "s2",
+     "url": "https://y.dev"
+    },
+    {
+     "type": "source-document",
+     "sourceId": "d1",
+     "mediaType": "application/pdf",
+     "title": "Doc",
+     "filename": "d.pdf"
+    }
+   ],
+   "parts": []
+  },
+  {
+   "name": "steps",
+   "chunks": [
+    {
+     "type": "start-step"
+    },
+    {
+     "type": "step-start"
+    },
+    {
+     "type": "finish-step"
+    }
+   ],
+   "parts": []
+  },
+  {
+   "name": "data_parts",
+   "chunks": [
+    {
+     "type": "data-status",
+     "id": "s",
+     "data": {
+      "n": 1
+     }
+    },
+    {
+     "type": "data-status",
+     "id": "s",
+     "data": {
+      "n": 2
+     }
+    },
+    {
+     "type": "data-status",
+     "data": {
+      "n": 3
+     }
+    },
+    {
+     "type": "data-status",
+     "data": {
+      "n": 4
+     }
+    },
+    {
+     "type": "data-temp",
+     "data": 1,
+     "transient": true
+    },
+    {
+     "type": "data-other",
+     "id": "s",
+     "data": "other"
+    }
+   ],
+   "parts": []
+  },
+  {
+   "name": "tool_lifecycle",
+   "chunks": [
+    {
+     "type": "tool-input-start",
+     "toolCallId": "c1",
+     "toolName": "search",
+     "providerExecuted": true,
+     "title": "Search"
+    },
+    {
+     "type": "tool-input-delta",
+     "toolCallId": "c1",
+     "inputTextDelta": "{\"q\":"
+    },
+    {
+     "type": "tool-input-delta",
+     "toolCallId": "c1",
+     "inputTextDelta": "\"x\"}"
+    },
+    {
+     "type": "tool-input-available",
+     "toolCallId": "c1",
+     "toolName": "search",
+     "input": {
+      "q": "x"
+     },
+     "providerMetadata": {
+      "p": {}
+     }
+    },
+    {
+     "type": "tool-output-available",
+     "toolCallId": "c1",
+     "output": {
+      "r": [
+       1
+      ]
+     },
+     "preliminary": true
+    },
+    {
+     "type": "tool-output-available",
+     "toolCallId": "c1",
+     "output": {
+      "r": [
+       1,
+       2
+      ]
+     }
+    }
+   ],
+   "parts": []
+  },
+  {
+   "name": "tool_streaming_to_available",
+   "chunks": [
+    {
+     "type": "tool-input-start",
+     "toolCallId": "c1",
+     "toolName": "search",
+     "title": "T"
+    },
+    {
+     "type": "tool-input-delta",
+     "toolCallId": "c1",
+     "inputTextDelta": "{\"q\":1}"
+    },
+    {
+     "type": "tool-input-available",
+     "toolCallId": "c1",
+     "toolName": "search",
+     "input": {
+      "q": 1
+     },
+     "providerExecuted": false
+    }
+   ],
+   "parts": []
+  },
+  {
+   "name": "tool_streaming_only",
+   "chunks": [
+    {
+     "type": "tool-input-start",
+     "toolCallId": "c1",
+     "toolName": "search"
+    },
+    {
+     "type": "tool-input-delta",
+     "toolCallId": "c1",
+     "inputTextDelta": "{\"q\":"
+    }
+   ],
+   "parts": []
+  },
+  {
+   "name": "tool_available_without_start",
+   "chunks": [
+    {
+     "type": "tool-input-available",
+     "toolCallId": "c1",
+     "toolName": "search",
+     "input": null
+    },
+    {
+     "type": "tool-input-available",
+     "toolCallId": "c2",
+     "toolName": "search",
+     "input": "{\"a\":1}"
+    },
+    {
+     "type": "tool-input-available",
+     "toolCallId": "c3",
+     "toolName": "search",
+     "input": [
+      1,
+      2
+     ]
+    },
+    {
+     "type": "tool-input-available",
+     "toolCallId": "c4",
+     "toolName": "search",
+     "input": "not json"
+    }
+   ],
+   "parts": []
+  },
+  {
+   "name": "tool_input_error",
+   "chunks": [
+    {
+     "type": "tool-input-start",
+     "toolCallId": "c1",
+     "toolName": "search"
+    },
+    {
+     "type": "tool-input-error",
+     "toolCallId": "c1",
+     "toolName": "search",
+     "input": "{bad",
+     "errorText": "invalid input"
+    },
+    {
+     "type": "tool-input-error",
+     "toolCallId": "c2",
+     "toolName": "search",
+     "input": {},
+     "errorText": "fresh"
+    }
+   ],
+   "parts": []
+  },
+  {
+   "name": "tool_input_error_after_output",
+   "chunks": [
+    {
+     "type": "tool-input-available",
+     "toolCallId": "c1",
+     "toolName": "search",
+     "input": {}
+    },
+    {
+     "type": "tool-output-available",
+     "toolCallId": "c1",
+     "output": 1
+    },
+    {
+     "type": "tool-input-error",
+     "toolCallId": "c1",
+     "toolName": "search",
+     "input": {},
+     "errorText": "late"
+    }
+   ],
+   "parts": []
+  },
+  {
+   "name": "tool_output_error_and_denied",
+   "chunks": [
+    {
+     "type": "tool-input-available",
+     "toolCallId": "c1",
+     "toolName": "search",
+     "input": {}
+    },
+    {
+     "type": "tool-output-error",
+     "toolCallId": "c1",
+     "errorText": "boom"
+    },
+    {
+     "type": "tool-input-available",
+     "toolCallId": "c2",
+     "toolName": "search",
+     "input": {}
+    },
+    {
+     "type": "tool-output-denied",
+     "toolCallId": "c2"
+    },
+    {
+     "type": "tool-output-denied",
+     "toolCallId": "c2"
+    },
+    {
+     "type": "tool-output-available",
+     "toolCallId": "missing",
+     "output": 1
+    }
+   ],
+   "parts": []
+  },
+  {
+   "name": "replayed_tool_chunks",
+   "chunks": [
+    {
+     "type": "tool-input-start",
+     "toolCallId": "c1",
+     "toolName": "search"
+    },
+    {
+     "type": "tool-input-available",
+     "toolCallId": "c1",
+     "toolName": "search",
+     "input": {
+      "q": 1
+     }
+    },
+    {
+     "type": "tool-input-start",
+     "toolCallId": "c1",
+     "toolName": "search"
+    },
+    {
+     "type": "tool-input-delta",
+     "toolCallId": "c1",
+     "inputTextDelta": "x"
+    },
+    {
+     "type": "tool-input-available",
+     "toolCallId": "c1",
+     "toolName": "search",
+     "input": {
+      "q": 2
+     }
+    },
+    {
+     "type": "tool-output-available",
+     "toolCallId": "c1",
+     "output": 1
+    },
+    {
+     "type": "tool-output-denied",
+     "toolCallId": "c1"
+    },
+    {
+     "type": "tool-approval-request",
+     "approvalId": "a",
+     "toolCallId": "c1"
+    }
+   ],
+   "parts": []
+  },
+  {
+   "name": "approval_normal_order",
+   "chunks": [
+    {
+     "type": "tool-input-start",
+     "toolCallId": "c1",
+     "toolName": "search"
+    },
+    {
+     "type": "tool-input-available",
+     "toolCallId": "c1",
+     "toolName": "search",
+     "input": {
+      "q": 1
+     }
+    },
+    {
+     "type": "tool-approval-request",
+     "approvalId": "a1",
+     "toolCallId": "c1"
+    }
+   ],
+   "parts": []
+  },
+  {
+   "name": "approval_input_from_deltas",
+   "chunks": [
+    {
+     "type": "tool-input-start",
+     "toolCallId": "c1",
+     "toolName": "search"
+    },
+    {
+     "type": "tool-input-delta",
+     "toolCallId": "c1",
+     "inputTextDelta": "{\"q\":"
+    },
+    {
+     "type": "tool-input-delta",
+     "toolCallId": "c1",
+     "inputTextDelta": "1}"
+    },
+    {
+     "type": "tool-approval-request",
+     "approvalId": "a1",
+     "toolCallId": "c1",
+     "approvalDescriptor": {
+      "why": "x"
+     }
+    }
+   ],
+   "parts": []
+  },
+  {
+   "name": "approval_late_input",
+   "chunks": [
+    {
+     "type": "tool-input-start",
+     "toolCallId": "c1",
+     "toolName": "search"
+    },
+    {
+     "type": "tool-approval-request",
+     "approvalId": "a1",
+     "toolCallId": "c1"
+    },
+    {
+     "type": "tool-input-available",
+     "toolCallId": "c1",
+     "toolName": "search",
+     "input": {
+      "q": 9
+     },
+     "title": "Late title"
+    }
+   ],
+   "parts": []
+  },
+  {
+   "name": "approval_canonical_replaces_truncated_deltas",
+   "chunks": [
+    {
+     "type": "tool-input-start",
+     "toolCallId": "c1",
+     "toolName": "search"
+    },
+    {
+     "type": "tool-input-delta",
+     "toolCallId": "c1",
+     "inputTextDelta": "{\"q\":"
+    },
+    {
+     "type": "tool-approval-request",
+     "approvalId": "a1",
+     "toolCallId": "c1"
+    },
+    {
+     "type": "tool-input-available",
+     "toolCallId": "c1",
+     "toolName": "search",
+     "input": {
+      "q": "full"
+     }
+    }
+   ],
+   "parts": []
+  },
+  {
+   "name": "approval_complete_input_never_replaced",
+   "chunks": [
+    {
+     "type": "tool-input-available",
+     "toolCallId": "c1",
+     "toolName": "search",
+     "input": {
+      "q": 1
+     }
+    },
+    {
+     "type": "tool-approval-request",
+     "approvalId": "a1",
+     "toolCallId": "c1"
+    },
+    {
+     "type": "tool-input-available",
+     "toolCallId": "c1",
+     "toolName": "search",
+     "input": {
+      "q": 2
+     }
+    }
+   ],
+   "parts": []
+  },
+  {
+   "name": "older_emitter_parsed_delta_input",
+   "chunks": [
+    {
+     "type": "tool-input-start",
+     "toolCallId": "c1",
+     "toolName": "search"
+    },
+    {
+     "type": "tool-input-delta",
+     "toolCallId": "c1",
+     "inputTextDelta": "{",
+     "input": {
+      "q": "part"
+     }
+    },
+    {
+     "type": "tool-approval-request",
+     "approvalId": "a1",
+     "toolCallId": "c1"
+    },
+    {
+     "type": "tool-input-available",
+     "toolCallId": "c1",
+     "toolName": "search",
+     "input": {
+      "q": "whole"
+     }
+    }
+   ],
+   "parts": []
+  },
+  {
+   "name": "approval_after_response_ignored",
+   "chunks": [
+    {
+     "type": "tool-input-available",
+     "toolCallId": "c1",
+     "toolName": "search",
+     "input": {}
+    },
+    {
+     "type": "tool-approval-request",
+     "approvalId": "a1",
+     "toolCallId": "c1"
+    }
+   ],
+   "parts": [
+    {
+     "type": "tool-search",
+     "toolCallId": "c1",
+     "toolName": "search",
+     "state": "approval-responded",
+     "input": {},
+     "approval": {
+      "id": "a0",
+      "approved": true
+     }
+    }
+   ]
+  },
+  {
+   "name": "unknown_chunks",
+   "chunks": [
+    {
+     "type": "start",
+     "messageId": "m"
+    },
+    {
+     "type": "finish"
+    },
+    {
+     "type": "message-metadata",
+     "messageMetadata": {}
+    },
+    {
+     "type": "error",
+     "errorText": "x"
+    },
+    {
+     "type": "custom-v7",
+     "kind": "x"
+    }
+   ],
+   "parts": []
+  }
+ ],
+ "accumulator": [
+  {
+   "name": "start_finish_metadata",
+   "options": {
+    "messageId": "m1"
+   },
+   "chunks": [
+    {
+     "type": "start",
+     "messageId": "provider-id",
+     "messageMetadata": {
+      "a": 1
+     }
+    },
+    {
+     "type": "text-start",
+     "id": "t"
+    },
+    {
+     "type": "text-delta",
+     "id": "t",
+     "delta": "hi"
+    },
+    {
+     "type": "text-end",
+     "id": "t"
+    },
+    {
+     "type": "message-metadata",
+     "messageMetadata": {
+      "b": 2
+     }
+    },
+    {
+     "type": "finish-step"
+    },
+    {
+     "type": "finish",
+     "finishReason": "stop",
+     "messageMetadata": {
+      "c": 3
+     }
+    }
+   ],
+   "mergeInto": [
+    {
+     "id": "u1",
+     "role": "user",
+     "parts": [
+      {
+       "type": "text",
+       "text": "q"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "start_without_fields",
+   "options": {
+    "messageId": "m1"
+   },
+   "chunks": [
+    {
+     "type": "start"
+    },
+    {
+     "type": "finish"
+    }
+   ]
+  },
+  {
+   "name": "continuation_keeps_id_and_merges",
+   "options": {
+    "messageId": "new",
+    "continuation": true,
+    "existingParts": [
+     {
+      "type": "text",
+      "text": "a",
+      "state": "done"
+     }
+    ],
+    "existingMetadata": {
+     "x": 1
+    }
+   },
+   "chunks": [
+    {
+     "type": "start",
+     "messageId": "ignored"
+    },
+    {
+     "type": "text-start",
+     "id": "t"
+    },
+    {
+     "type": "text-delta",
+     "id": "t",
+     "delta": "b"
+    },
+    {
+     "type": "text-end",
+     "id": "t"
+    }
+   ],
+   "mergeInto": [
+    {
+     "id": "u1",
+     "role": "user",
+     "parts": []
+    },
+    {
+     "id": "a1",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "text",
+       "text": "a",
+       "state": "done"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "continuation_replays_pending_onto_last_assistant",
+   "options": {
+    "messageId": "temp",
+    "continuation": true
+   },
+   "chunks": [
+    {
+     "type": "text-start",
+     "id": "t"
+    },
+    {
+     "type": "text-delta",
+     "id": "t",
+     "delta": "more"
+    },
+    {
+     "type": "text-end",
+     "id": "t"
+    },
+    {
+     "type": "message-metadata",
+     "messageMetadata": {
+      "y": 2
+     }
+    }
+   ],
+   "mergeInto": [
+    {
+     "id": "u1",
+     "role": "user",
+     "parts": []
+    },
+    {
+     "id": "a1",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "text",
+       "text": "first",
+       "state": "done"
+      }
+     ],
+     "metadata": {
+      "x": 1
+     }
+    },
+    {
+     "id": "u2",
+     "role": "user",
+     "parts": []
+    }
+   ]
+  },
+  {
+   "name": "continuation_appends_without_assistant",
+   "options": {
+    "messageId": "temp",
+    "continuation": true
+   },
+   "chunks": [
+    {
+     "type": "text-start",
+     "id": "t"
+    },
+    {
+     "type": "text-delta",
+     "id": "t",
+     "delta": "x"
+    },
+    {
+     "type": "text-end",
+     "id": "t"
+    }
+   ],
+   "mergeInto": [
+    {
+     "id": "u1",
+     "role": "user",
+     "parts": []
+    }
+   ]
+  },
+  {
+   "name": "replace_by_id",
+   "options": {
+    "messageId": "a1"
+   },
+   "chunks": [
+    {
+     "type": "text-start",
+     "id": "t"
+    },
+    {
+     "type": "text-delta",
+     "id": "t",
+     "delta": "new"
+    },
+    {
+     "type": "text-end",
+     "id": "t"
+    }
+   ],
+   "mergeInto": [
+    {
+     "id": "a1",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "text",
+       "text": "old"
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "role": "user",
+     "parts": []
+    }
+   ]
+  },
+  {
+   "name": "tool_actions",
+   "options": {
+    "messageId": "m1"
+   },
+   "chunks": [
+    {
+     "type": "tool-input-available",
+     "toolCallId": "c1",
+     "toolName": "search",
+     "input": {}
+    },
+    {
+     "type": "tool-approval-request",
+     "approvalId": "a",
+     "toolCallId": "c1"
+    },
+    {
+     "type": "tool-approval-request",
+     "approvalId": "b",
+     "toolCallId": "nowhere"
+    },
+    {
+     "type": "tool-output-available",
+     "toolCallId": "earlier",
+     "output": 5,
+     "preliminary": true
+    },
+    {
+     "type": "tool-output-error",
+     "toolCallId": "earlier2",
+     "errorText": "bad"
+    },
+    {
+     "type": "tool-output-available",
+     "toolCallId": "c1",
+     "output": 1
+    }
+   ]
+  },
+  {
+   "name": "errors",
+   "options": {
+    "messageId": "m1"
+   },
+   "chunks": [
+    {
+     "type": "error",
+     "errorText": "boom"
+    },
+    {
+     "type": "error"
+    }
+   ]
+  }
+ ],
+ "reconciler": [
+  {
+   "name": "merges_server_output_into_pending",
+   "incoming": [
+    {
+     "id": "u1",
+     "role": "user",
+     "parts": []
+    },
+    {
+     "id": "a1",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "tool-search",
+       "toolCallId": "c1",
+       "toolName": "search",
+       "state": "input-available",
+       "input": {
+        "q": 1
+       }
+      }
+     ]
+    }
+   ],
+   "server": [
+    {
+     "id": "u1",
+     "role": "user",
+     "parts": []
+    },
+    {
+     "id": "a1",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "tool-search",
+       "toolCallId": "c1",
+       "toolName": "search",
+       "state": "output-available",
+       "input": {
+        "q": 1
+       },
+       "output": "r"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "merges_error_and_denial",
+   "incoming": [
+    {
+     "id": "a1",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "tool-search",
+       "toolCallId": "c1",
+       "toolName": "search",
+       "state": "approval-requested",
+       "input": {}
+      },
+      {
+       "type": "tool-search",
+       "toolCallId": "c2",
+       "toolName": "search",
+       "state": "input-available",
+       "input": {}
+      },
+      {
+       "type": "tool-search",
+       "toolCallId": "c3",
+       "toolName": "search",
+       "state": "output-error",
+       "input": {},
+       "errorText": "client"
+      }
+     ]
+    }
+   ],
+   "server": [
+    {
+     "id": "a1",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "tool-search",
+       "toolCallId": "c1",
+       "toolName": "search",
+       "state": "output-error",
+       "input": {},
+       "errorText": "e"
+      },
+      {
+       "type": "tool-search",
+       "toolCallId": "c2",
+       "toolName": "search",
+       "state": "output-denied",
+       "input": {},
+       "approval": {
+        "id": "x",
+        "approved": false
+       }
+      },
+      {
+       "type": "tool-search",
+       "toolCallId": "c3",
+       "toolName": "search",
+       "state": "output-available",
+       "input": {},
+       "output": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "adopts_server_id_by_content",
+   "incoming": [
+    {
+     "id": "u1",
+     "role": "user",
+     "parts": []
+    },
+    {
+     "id": "temp",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "text",
+       "text": "hi"
+      }
+     ]
+    }
+   ],
+   "server": [
+    {
+     "id": "u1",
+     "role": "user",
+     "parts": []
+    },
+    {
+     "id": "a1",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "text",
+       "text": "hi"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "identical_contents_map_one_to_one",
+   "incoming": [
+    {
+     "id": "t1",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "text",
+       "text": "same"
+      }
+     ]
+    },
+    {
+     "id": "t2",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "text",
+       "text": "same"
+      }
+     ]
+    }
+   ],
+   "server": [
+    {
+     "id": "a1",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "text",
+       "text": "same"
+      }
+     ]
+    },
+    {
+     "id": "a2",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "text",
+       "text": "same"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "adopts_server_id_by_tool_call",
+   "incoming": [
+    {
+     "id": "temp",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "tool-search",
+       "toolCallId": "c1",
+       "toolName": "search",
+       "state": "input-available",
+       "input": {
+        "q": 1
+       }
+      }
+     ]
+    }
+   ],
+   "server": [
+    {
+     "id": "a1",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "tool-search",
+       "toolCallId": "c1",
+       "toolName": "search",
+       "state": "output-available",
+       "input": {
+        "q": 1
+       },
+       "output": "r"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "reordered_input_keys_are_the_same_call",
+   "incoming": [
+    {
+     "id": "temp",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "tool-search",
+       "toolCallId": "c1",
+       "toolName": "search",
+       "state": "input-available",
+       "input": {
+        "b": 2,
+        "a": 1
+       }
+      }
+     ]
+    }
+   ],
+   "server": [
+    {
+     "id": "a1",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "tool-search",
+       "toolCallId": "c1",
+       "toolName": "search",
+       "state": "output-available",
+       "input": {
+        "a": 1,
+        "b": 2
+       },
+       "output": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "different_tool_same_call_id_not_claimed",
+   "incoming": [
+    {
+     "id": "temp",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "tool-other",
+       "toolCallId": "c1",
+       "toolName": "other",
+       "state": "input-available",
+       "input": {
+        "q": 1
+       }
+      }
+     ]
+    }
+   ],
+   "server": [
+    {
+     "id": "a1",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "tool-search",
+       "toolCallId": "c1",
+       "toolName": "search",
+       "state": "output-available",
+       "input": {
+        "q": 1
+       },
+       "output": "r"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "drops_stale_echoed_copy",
+   "incoming": [
+    {
+     "id": "u1",
+     "role": "user",
+     "parts": []
+    },
+    {
+     "id": "copy",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "tool-search",
+       "toolCallId": "c1",
+       "toolName": "search",
+       "state": "input-available",
+       "input": {
+        "q": 1
+       }
+      }
+     ]
+    },
+    {
+     "id": "a1",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "tool-search",
+       "toolCallId": "c1",
+       "toolName": "search",
+       "state": "output-available",
+       "input": {
+        "q": 1
+       },
+       "output": "r"
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "role": "user",
+     "parts": []
+    }
+   ],
+   "server": [
+    {
+     "id": "u1",
+     "role": "user",
+     "parts": []
+    },
+    {
+     "id": "a1",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "tool-search",
+       "toolCallId": "c1",
+       "toolName": "search",
+       "state": "output-available",
+       "input": {
+        "q": 1
+       },
+       "output": "r"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "keeps_copy_with_other_content",
+   "incoming": [
+    {
+     "id": "copy",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "tool-search",
+       "toolCallId": "c1",
+       "toolName": "search",
+       "state": "input-available",
+       "input": {
+        "q": 1
+       }
+      },
+      {
+       "type": "text",
+       "text": "extra"
+      }
+     ]
+    },
+    {
+     "id": "a1",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "tool-search",
+       "toolCallId": "c1",
+       "toolName": "search",
+       "state": "output-available",
+       "input": {
+        "q": 1
+       },
+       "output": "r"
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "role": "user",
+     "parts": []
+    }
+   ],
+   "server": [
+    {
+     "id": "a1",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "tool-search",
+       "toolCallId": "c1",
+       "toolName": "search",
+       "state": "output-available",
+       "input": {
+        "q": 1
+       },
+       "output": "r"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "no_server_messages",
+   "incoming": [
+    {
+     "id": "u1",
+     "role": "user",
+     "parts": []
+    },
+    {
+     "id": "a1",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "tool-search",
+       "toolCallId": "c1",
+       "toolName": "search",
+       "state": "input-available",
+       "input": {
+        "q": 1
+       }
+      }
+     ]
+    }
+   ],
+   "server": [],
+   "orphan": {
+    "existing": {
+     "id": "a1",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "tool-search",
+       "toolCallId": "c1",
+       "toolName": "search",
+       "state": "output-available",
+       "input": {
+        "q": 1
+       },
+       "output": "r"
+      }
+     ],
+     "metadata": {
+      "a": 1,
+      "b": 1
+     }
+    },
+    "incoming": {
+     "id": "a1",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "tool-search",
+       "toolCallId": "c1",
+       "toolName": "search",
+       "state": "input-available",
+       "input": {
+        "q": 1
+       }
+      },
+      {
+       "type": "tool-search",
+       "toolCallId": "c2",
+       "toolName": "search",
+       "state": "input-available",
+       "input": {}
+      }
+     ],
+     "metadata": {
+      "b": 2
+     }
+    }
+   }
+  },
+  {
+   "name": "orphan_without_incoming_metadata",
+   "incoming": [
+    {
+     "id": "u1",
+     "role": "user",
+     "parts": []
+    }
+   ],
+   "server": [
+    {
+     "id": "u1",
+     "role": "user",
+     "parts": []
+    }
+   ],
+   "orphan": {
+    "existing": {
+     "id": "a1",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "text",
+       "text": "a"
+      }
+     ],
+     "metadata": {
+      "a": 1
+     }
+    },
+    "incoming": {
+     "id": "a1",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "text",
+       "text": "b"
+      }
+     ]
+    }
+   }
+  }
+ ],
+ "toolState": [
+  {
+   "name": "result",
+   "parts": [
+    {
+     "type": "tool-search",
+     "toolCallId": "c1",
+     "toolName": "search",
+     "state": "input-available",
+     "input": {}
+    }
+   ],
+   "update": {
+    "kind": "result",
+    "toolCallId": "c1",
+    "output": {
+     "ok": true
+    }
+   },
+   "clientTools": [
+    "search"
+   ]
+  },
+  {
+   "name": "result_error_default",
+   "parts": [
+    {
+     "type": "tool-search",
+     "toolCallId": "c1",
+     "toolName": "search",
+     "state": "approval-requested",
+     "input": {},
+     "approval": {
+      "id": "a"
+     }
+    }
+   ],
+   "update": {
+    "kind": "result",
+    "toolCallId": "c1",
+    "output": null,
+    "overrideState": "output-error"
+   }
+  },
+  {
+   "name": "result_wrong_state",
+   "parts": [
+    {
+     "type": "tool-search",
+     "toolCallId": "c1",
+     "toolName": "search",
+     "state": "output-available",
+     "input": {},
+     "output": 1
+    }
+   ],
+   "update": {
+    "kind": "result",
+    "toolCallId": "c1",
+    "output": 2
+   }
+  },
+  {
+   "name": "result_no_match",
+   "parts": [
+    {
+     "type": "tool-search",
+     "toolCallId": "c1",
+     "toolName": "search",
+     "state": "input-available",
+     "input": {}
+    }
+   ],
+   "update": {
+    "kind": "result",
+    "toolCallId": "nope",
+    "output": 2
+   }
+  },
+  {
+   "name": "cross_message_settled_stays",
+   "parts": [
+    {
+     "type": "tool-search",
+     "toolCallId": "c1",
+     "toolName": "search",
+     "state": "output-error",
+     "input": {},
+     "errorText": "e"
+    }
+   ],
+   "update": {
+    "kind": "crossMessage",
+    "toolCallId": "c1",
+    "updateType": "output-available",
+    "output": 1
+   }
+  },
+  {
+   "name": "cross_message_preliminary",
+   "parts": [
+    {
+     "type": "tool-search",
+     "toolCallId": "c1",
+     "toolName": "search",
+     "state": "input-streaming"
+    }
+   ],
+   "update": {
+    "kind": "crossMessage",
+    "toolCallId": "c1",
+    "updateType": "output-available",
+    "output": 1,
+    "preliminary": true
+   }
+  },
+  {
+   "name": "cross_message_error_default",
+   "parts": [
+    {
+     "type": "tool-search",
+     "toolCallId": "c1",
+     "toolName": "search",
+     "state": "approval-responded",
+     "input": {},
+     "approval": {
+      "id": "a",
+      "approved": true
+     }
+    }
+   ],
+   "update": {
+    "kind": "crossMessage",
+    "toolCallId": "c1",
+    "updateType": "output-error"
+   }
+  },
+  {
+   "name": "approval_yes",
+   "parts": [
+    {
+     "type": "tool-search",
+     "toolCallId": "c1",
+     "toolName": "search",
+     "state": "approval-requested",
+     "input": {},
+     "approval": {
+      "id": "a1"
+     }
+    }
+   ],
+   "update": {
+    "kind": "approval",
+    "toolCallId": "c1",
+    "approved": true
+   }
+  },
+  {
+   "name": "approval_no_synthesized_id",
+   "parts": [
+    {
+     "type": "tool-search",
+     "toolCallId": "c1",
+     "toolName": "search",
+     "state": "input-available",
+     "input": {}
+    }
+   ],
+   "update": {
+    "kind": "approval",
+    "toolCallId": "c1",
+    "approved": false
+   }
+  },
+  {
+   "name": "paused_replaced",
+   "parts": [
+    {
+     "type": "tool-search",
+     "toolCallId": "c1",
+     "toolName": "search",
+     "state": "output-available",
+     "input": {},
+     "output": {
+      "status": "paused",
+      "executionId": "e1"
+     }
+    }
+   ],
+   "update": {
+    "kind": "paused",
+    "toolCallId": "c1",
+    "executionId": "e1",
+    "output": {
+     "done": 1
+    }
+   }
+  },
+  {
+   "name": "paused_other_execution",
+   "parts": [
+    {
+     "type": "tool-search",
+     "toolCallId": "c1",
+     "toolName": "search",
+     "state": "output-available",
+     "input": {},
+     "output": {
+      "status": "paused",
+      "executionId": "e2"
+     }
+    }
+   ],
+   "update": {
+    "kind": "paused",
+    "toolCallId": "c1",
+    "executionId": "e1",
+    "output": 1
+   }
+  },
+  {
+   "name": "batch_incomplete",
+   "parts": [
+    {
+     "type": "tool-search",
+     "toolCallId": "c1",
+     "toolName": "search",
+     "state": "output-available",
+     "input": {},
+     "output": 1
+    },
+    {
+     "type": "tool-search",
+     "toolCallId": "c2",
+     "toolName": "search",
+     "state": "input-available",
+     "input": {}
+    },
+    {
+     "type": "dynamic-tool",
+     "toolCallId": "c3",
+     "toolName": "dyn",
+     "state": "input-available",
+     "input": {}
+    }
+   ],
+   "update": {
+    "kind": "result",
+    "toolCallId": "c2",
+    "output": 2
+   },
+   "clientTools": [
+    "dyn"
+   ]
+  }
+ ],
+ "repair": [
+  {
+   "name": "interrupted_and_settled",
+   "messages": [
+    {
+     "id": "a1",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "tool-search",
+       "toolCallId": "c1",
+       "toolName": "search",
+       "state": "input-available",
+       "input": "bad"
+      },
+      {
+       "type": "tool-search",
+       "toolCallId": "c2",
+       "toolName": "search",
+       "state": "output-available",
+       "input": [
+        1
+       ],
+       "output": 1
+      },
+      {
+       "type": "text",
+       "text": "x"
+      },
+      {
+       "type": "dynamic-tool",
+       "toolCallId": "c3",
+       "toolName": "d",
+       "state": "input-streaming"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "approvals_option_off",
+   "messages": [
+    {
+     "id": "a1",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "tool-search",
+       "toolCallId": "c1",
+       "toolName": "search",
+       "state": "approval-responded",
+       "input": {},
+       "approval": {
+        "id": "a",
+        "approved": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "role": "user",
+     "parts": []
+    }
+   ]
+  },
+  {
+   "name": "approvals_option_on",
+   "repairApprovalResponded": true,
+   "messages": [
+    {
+     "id": "a1",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "tool-search",
+       "toolCallId": "c1",
+       "toolName": "search",
+       "state": "approval-responded",
+       "input": {},
+       "approval": {
+        "id": "a",
+        "approved": true
+       }
+      },
+      {
+       "type": "tool-search",
+       "toolCallId": "c2",
+       "toolName": "search",
+       "state": "approval-responded",
+       "input": null,
+       "approval": {
+        "id": "b",
+        "approved": false
+       }
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "role": "user",
+     "parts": []
+    },
+    {
+     "id": "a3",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "tool-search",
+       "toolCallId": "c3",
+       "toolName": "search",
+       "state": "approval-responded",
+       "input": {},
+       "approval": {
+        "id": "c",
+        "approved": true
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "result_field_counts_as_settled",
+   "messages": [
+    {
+     "id": "a1",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "tool-search",
+       "toolCallId": "c1",
+       "toolName": "search",
+       "state": "input-available",
+       "input": {},
+       "result": 1
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

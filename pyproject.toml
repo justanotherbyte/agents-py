@@ -1,0 +1,58 @@
+[project]
+name = "agents-py"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Viswa Marepalli", email = "reachvishm@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = ["typing-extensions>=4.12"]
+
+[build-system]
+requires = ["uv_build>=0.12.19,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "agents"
+
+[dependency-groups]
+dev = ["pytest", "ruff", "ty", "workers-runtime-sdk"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+extend-exclude = ["verify", ".design"]   # the verification Worker and design docs aren't SDK code
+
+[tool.ruff.lint]
+select = [
+    "E", "W", "F",      # pycodestyle, pyflakes
+    "I",                # import sorting
+    "N",                # PEP 8 naming
+    "UP",               # modern syntax for the target version
+    "B",                # bugbear
+    "SIM", "C4", "PIE", # simplifications
+    "RUF",              # ruff-specific
+    "ANN",              # annotations everywhere
+    "D",                # docstrings
+]
+ignore = ["ANN401"]     # Any is allowed where decided (code_semantics.md §3)
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["D", "ANN"]
+# Wildcard re-exports with a static __all__ (checked by tests/test_public_api.py).
+"src/agents/__init__.py" = ["F403", "F405"]
+# wire() returns a dataclasses.field() (utilities.md §5), which RUF009 can't see.
+"src/agents/chat/{chunks,messages}.py" = ["RUF009"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ty.environment]
+python-version = "3.12"
+
+[tool.ty.analysis]
+allowed-unresolved-imports = ["js", "pyodide", "pyodide.**"]

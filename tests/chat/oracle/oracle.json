@@ -1,0 +1,1881 @@
+{
+ "builder": {
+  "text": {
+   "parts": [
+    {
+     "type": "text",
+     "text": "Hello",
+     "state": "done"
+    },
+    {
+     "type": "text",
+     "text": " again",
+     "state": "done"
+    }
+   ],
+   "replay": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+   ],
+   "handled": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  "text_delta_without_start": {
+   "parts": [
+    {
+     "type": "text",
+     "text": "x",
+     "state": "streaming"
+    }
+   ],
+   "replay": [
+    false
+   ],
+   "handled": [
+    true
+   ]
+  },
+  "text_end_without_part": {
+   "parts": [],
+   "replay": [
+    false
+   ],
+   "handled": [
+    true
+   ]
+  },
+  "empty_delta": {
+   "parts": [
+    {
+     "type": "text",
+     "text": "",
+     "state": "streaming"
+    }
+   ],
+   "replay": [
+    false,
+    false
+   ],
+   "handled": [
+    true,
+    true
+   ]
+  },
+  "reasoning_metadata": {
+   "parts": [
+    {
+     "type": "reasoning",
+     "text": "think",
+     "state": "done",
+     "providerMetadata": {
+      "a": {
+       "x": 1
+      },
+      "b": {
+       "sig": "s"
+      }
+     }
+    }
+   ],
+   "replay": [
+    false,
+    false,
+    false
+   ],
+   "handled": [
+    true,
+    true,
+    true
+   ]
+  },
+  "reasoning_delta_without_start": {
+   "parts": [
+    {
+     "type": "reasoning",
+     "text": "x",
+     "state": "streaming",
+     "providerMetadata": {
+      "a": {}
+     }
+    }
+   ],
+   "replay": [
+    false
+   ],
+   "handled": [
+    true
+   ]
+  },
+  "reasoning_end_no_metadata": {
+   "parts": [
+    {
+     "type": "reasoning",
+     "text": "",
+     "state": "done"
+    }
+   ],
+   "replay": [
+    false,
+    false
+   ],
+   "handled": [
+    true,
+    true
+   ]
+  },
+  "file_and_sources": {
+   "parts": [
+    {
+     "type": "file",
+     "mediaType": "image/png",
+     "url": "data:image/png;base64,AA"
+    },
+    {
+     "type": "source-url",
+     "sourceId": "s1",
+     "url": "https://x.dev",
+     "title": "X"
+    },
+    {
+     "type": "source-url",
+     "sourceId": "s2",
+     "url": "https://y.dev"
+    },
+    {
+     "type": "source-document",
+     "sourceId": "d1",
+     "mediaType": "application/pdf",
+     "title": "Doc",
+     "filename": "d.pdf"
+    }
+   ],
+   "replay": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "handled": [
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  "steps": {
+   "parts": [
+    {
+     "type": "step-start"
+    },
+    {
+     "type": "step-start"
+    }
+   ],
+   "replay": [
+    false,
+    false,
+    false
+   ],
+   "handled": [
+    true,
+    true,
+    false
+   ]
+  },
+  "data_parts": {
+   "parts": [
+    {
+     "type": "data-status",
+     "id": "s",
+     "data": {
+      "n": 2
+     }
+    },
+    {
+     "type": "data-status",
+     "data": {
+      "n": 3
+     }
+    },
+    {
+     "type": "data-status",
+     "data": {
+      "n": 4
+     }
+    },
+    {
+     "type": "data-other",
+     "id": "s",
+     "data": "other"
+    }
+   ],
+   "replay": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+   ],
+   "handled": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  "tool_lifecycle": {
+   "parts": [
+    {
+     "type": "tool-search",
+     "toolCallId": "c1",
+     "toolName": "search",
+     "state": "output-available",
+     "input": {
+      "q": "x"
+     },
+     "providerExecuted": true,
+     "title": "Search",
+     "callProviderMetadata": {
+      "p": {}
+     },
+     "output": {
+      "r": [
+       1,
+       2
+      ]
+     },
+     "preliminary": true
+    }
+   ],
+   "replay": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+   ],
+   "handled": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  "tool_streaming_to_available": {
+   "parts": [
+    {
+     "type": "tool-search",
+     "toolCallId": "c1",
+     "toolName": "search",
+     "state": "input-available",
+     "input": {
+      "q": 1
+     },
+     "title": "T",
+     "providerExecuted": false
+    }
+   ],
+   "replay": [
+    false,
+    false,
+    false
+   ],
+   "handled": [
+    true,
+    true,
+    true
+   ]
+  },
+  "tool_streaming_only": {
+   "parts": [
+    {
+     "type": "tool-search",
+     "toolCallId": "c1",
+     "toolName": "search",
+     "state": "input-streaming"
+    }
+   ],
+   "replay": [
+    false,
+    false
+   ],
+   "handled": [
+    true,
+    true
+   ]
+  },
+  "tool_available_without_start": {
+   "parts": [
+    {
+     "type": "tool-search",
+     "toolCallId": "c1",
+     "toolName": "search",
+     "state": "input-available",
+     "input": {}
+    },
+    {
+     "type": "tool-search",
+     "toolCallId": "c2",
+     "toolName": "search",
+     "state": "input-available",
+     "input": {
+      "a": 1
+     }
+    },
+    {
+     "type": "tool-search",
+     "toolCallId": "c3",
+     "toolName": "search",
+     "state": "input-available",
+     "input": {}
+    },
+    {
+     "type": "tool-search",
+     "toolCallId": "c4",
+     "toolName": "search",
+     "state": "input-available",
+     "input": {}
+    }
+   ],
+   "replay": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "handled": [
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  "tool_input_error": {
+   "parts": [
+    {
+     "type": "tool-search",
+     "toolCallId": "c1",
+     "toolName": "search",
+     "state": "output-error",
+     "input": {},
+     "errorText": "invalid input"
+    },
+    {
+     "type": "tool-search",
+     "toolCallId": "c2",
+     "toolName": "search",
+     "state": "output-error",
+     "input": {},
+     "errorText": "fresh"
+    }
+   ],
+   "replay": [
+    false,
+    false,
+    false
+   ],
+   "handled": [
+    true,
+    true,
+    true
+   ]
+  },
+  "tool_input_error_after_output": {
+   "parts": [
+    {
+     "type": "tool-search",
+     "toolCallId": "c1",
+     "toolName": "search",
+     "state": "output-available",
+     "input": {},
+     "output": 1
+    }
+   ],
+   "replay": [
+    false,
+    false,
+    false
+   ],
+   "handled": [
+    true,
+    true,
+    true
+   ]
+  },
+  "tool_output_error_and_denied": {
+   "parts": [
+    {
+     "type": "tool-search",
+     "toolCallId": "c1",
+     "toolName": "search",
+     "state": "output-error",
+     "input": {},
+     "errorText": "boom"
+    },
+    {
+     "type": "tool-search",
+     "toolCallId": "c2",
+     "toolName": "search",
+     "state": "output-denied",
+     "input": {}
+    }
+   ],
+   "replay": [
+    false,
+    false,
+    false,
+    false,
+    true,
+    false
+   ],
+   "handled": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  "replayed_tool_chunks": {
+   "parts": [
+    {
+     "type": "tool-search",
+     "toolCallId": "c1",
+     "toolName": "search",
+     "state": "output-available",
+     "input": {
+      "q": 1
+     },
+     "output": 1
+    }
+   ],
+   "replay": [
+    false,
+    false,
+    true,
+    true,
+    true,
+    false,
+    true,
+    true
+   ],
+   "handled": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  "approval_normal_order": {
+   "parts": [
+    {
+     "type": "tool-search",
+     "toolCallId": "c1",
+     "toolName": "search",
+     "state": "approval-requested",
+     "input": {
+      "q": 1
+     },
+     "approval": {
+      "id": "a1"
+     }
+    }
+   ],
+   "replay": [
+    false,
+    false,
+    false
+   ],
+   "handled": [
+    true,
+    true,
+    true
+   ]
+  },
+  "approval_input_from_deltas": {
+   "parts": [
+    {
+     "type": "tool-search",
+     "toolCallId": "c1",
+     "toolName": "search",
+     "state": "approval-requested",
+     "input": {
+      "q": 1
+     },
+     "approval": {
+      "id": "a1",
+      "descriptor": {
+       "why": "x"
+      }
+     }
+    }
+   ],
+   "replay": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "handled": [
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  "approval_late_input": {
+   "parts": [
+    {
+     "type": "tool-search",
+     "toolCallId": "c1",
+     "toolName": "search",
+     "state": "approval-requested",
+     "input": {
+      "q": 9
+     },
+     "approval": {
+      "id": "a1"
+     },
+     "title": "Late title"
+    }
+   ],
+   "replay": [
+    false,
+    false,
+    true
+   ],
+   "handled": [
+    true,
+    true,
+    true
+   ]
+  },
+  "approval_canonical_replaces_truncated_deltas": {
+   "parts": [
+    {
+     "type": "tool-search",
+     "toolCallId": "c1",
+     "toolName": "search",
+     "state": "approval-requested",
+     "input": {
+      "q": "full"
+     },
+     "approval": {
+      "id": "a1"
+     }
+    }
+   ],
+   "replay": [
+    false,
+    false,
+    false,
+    true
+   ],
+   "handled": [
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  "approval_complete_input_never_replaced": {
+   "parts": [
+    {
+     "type": "tool-search",
+     "toolCallId": "c1",
+     "toolName": "search",
+     "state": "approval-requested",
+     "input": {
+      "q": 1
+     },
+     "approval": {
+      "id": "a1"
+     }
+    }
+   ],
+   "replay": [
+    false,
+    false,
+    true
+   ],
+   "handled": [
+    true,
+    true,
+    true
+   ]
+  },
+  "older_emitter_parsed_delta_input": {
+   "parts": [
+    {
+     "type": "tool-search",
+     "toolCallId": "c1",
+     "toolName": "search",
+     "state": "approval-requested",
+     "input": {
+      "q": "whole"
+     },
+     "approval": {
+      "id": "a1"
+     }
+    }
+   ],
+   "replay": [
+    false,
+    false,
+    false,
+    true
+   ],
+   "handled": [
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  "approval_after_response_ignored": {
+   "parts": [
+    {
+     "type": "tool-search",
+     "toolCallId": "c1",
+     "toolName": "search",
+     "state": "approval-responded",
+     "input": {},
+     "approval": {
+      "id": "a0",
+      "approved": true
+     }
+    }
+   ],
+   "replay": [
+    true,
+    true
+   ],
+   "handled": [
+    true,
+    true
+   ]
+  },
+  "unknown_chunks": {
+   "parts": [],
+   "replay": [
+    false,
+    false,
+    false,
+    false,
+    false
+   ],
+   "handled": [
+    false,
+    false,
+    false,
+    false,
+    false
+   ]
+  }
+ },
+ "accumulator": {
+  "start_finish_metadata": {
+   "results": [
+    {
+     "handled": true,
+     "action": {
+      "type": "start",
+      "messageId": "provider-id",
+      "metadata": {
+       "a": 1
+      }
+     }
+    },
+    {
+     "handled": true
+    },
+    {
+     "handled": true
+    },
+    {
+     "handled": true
+    },
+    {
+     "handled": true,
+     "action": {
+      "type": "message-metadata",
+      "metadata": {
+       "b": 2
+      }
+     }
+    },
+    {
+     "handled": true
+    },
+    {
+     "handled": true,
+     "action": {
+      "type": "finish",
+      "finishReason": "stop",
+      "metadata": {
+       "c": 3
+      }
+     }
+    }
+   ],
+   "message": {
+    "id": "provider-id",
+    "role": "assistant",
+    "parts": [
+     {
+      "type": "text",
+      "text": "hi",
+      "state": "done"
+     }
+    ],
+    "metadata": {
+     "a": 1,
+     "b": 2,
+     "c": 3
+    }
+   },
+   "merged": [
+    {
+     "id": "u1",
+     "role": "user",
+     "parts": [
+      {
+       "type": "text",
+       "text": "q"
+      }
+     ]
+    },
+    {
+     "id": "provider-id",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "text",
+       "text": "hi",
+       "state": "done"
+      }
+     ],
+     "metadata": {
+      "a": 1,
+      "b": 2,
+      "c": 3
+     }
+    }
+   ]
+  },
+  "start_without_fields": {
+   "results": [
+    {
+     "handled": true,
+     "action": {
+      "type": "start"
+     }
+    },
+    {
+     "handled": true,
+     "action": {
+      "type": "finish"
+     }
+    }
+   ],
+   "message": {
+    "id": "m1",
+    "role": "assistant",
+    "parts": []
+   }
+  },
+  "continuation_keeps_id_and_merges": {
+   "results": [
+    {
+     "handled": true,
+     "action": {
+      "type": "start",
+      "messageId": "ignored"
+     }
+    },
+    {
+     "handled": true
+    },
+    {
+     "handled": true
+    },
+    {
+     "handled": true
+    }
+   ],
+   "message": {
+    "id": "new",
+    "role": "assistant",
+    "parts": [
+     {
+      "type": "text",
+      "text": "a",
+      "state": "done"
+     },
+     {
+      "type": "text",
+      "text": "b",
+      "state": "done"
+     }
+    ],
+    "metadata": {
+     "x": 1
+    }
+   },
+   "merged": [
+    {
+     "id": "u1",
+     "role": "user",
+     "parts": []
+    },
+    {
+     "id": "a1",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "text",
+       "text": "a",
+       "state": "done"
+      },
+      {
+       "type": "text",
+       "text": "b",
+       "state": "done"
+      }
+     ],
+     "metadata": {
+      "x": 1
+     }
+    }
+   ]
+  },
+  "continuation_replays_pending_onto_last_assistant": {
+   "results": [
+    {
+     "handled": true
+    },
+    {
+     "handled": true
+    },
+    {
+     "handled": true
+    },
+    {
+     "handled": true,
+     "action": {
+      "type": "message-metadata",
+      "metadata": {
+       "y": 2
+      }
+     }
+    }
+   ],
+   "message": {
+    "id": "temp",
+    "role": "assistant",
+    "parts": [
+     {
+      "type": "text",
+      "text": "more",
+      "state": "done"
+     }
+    ],
+    "metadata": {
+     "y": 2
+    }
+   },
+   "merged": [
+    {
+     "id": "u1",
+     "role": "user",
+     "parts": []
+    },
+    {
+     "id": "a1",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "text",
+       "text": "first",
+       "state": "done"
+      },
+      {
+       "type": "text",
+       "text": "more",
+       "state": "done"
+      }
+     ],
+     "metadata": {
+      "x": 1,
+      "y": 2
+     }
+    },
+    {
+     "id": "u2",
+     "role": "user",
+     "parts": []
+    }
+   ]
+  },
+  "continuation_appends_without_assistant": {
+   "results": [
+    {
+     "handled": true
+    },
+    {
+     "handled": true
+    },
+    {
+     "handled": true
+    }
+   ],
+   "message": {
+    "id": "temp",
+    "role": "assistant",
+    "parts": [
+     {
+      "type": "text",
+      "text": "x",
+      "state": "done"
+     }
+    ]
+   },
+   "merged": [
+    {
+     "id": "u1",
+     "role": "user",
+     "parts": []
+    },
+    {
+     "id": "temp",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "text",
+       "text": "x",
+       "state": "done"
+      }
+     ]
+    }
+   ]
+  },
+  "replace_by_id": {
+   "results": [
+    {
+     "handled": true
+    },
+    {
+     "handled": true
+    },
+    {
+     "handled": true
+    }
+   ],
+   "message": {
+    "id": "a1",
+    "role": "assistant",
+    "parts": [
+     {
+      "type": "text",
+      "text": "new",
+      "state": "done"
+     }
+    ]
+   },
+   "merged": [
+    {
+     "id": "a1",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "text",
+       "text": "new",
+       "state": "done"
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "role": "user",
+     "parts": []
+    }
+   ]
+  },
+  "tool_actions": {
+   "results": [
+    {
+     "handled": true
+    },
+    {
+     "handled": true,
+     "action": {
+      "type": "tool-approval-request",
+      "toolCallId": "c1"
+     }
+    },
+    {
+     "handled": true,
+     "action": {
+      "type": "tool-approval-request",
+      "toolCallId": "nowhere"
+     }
+    },
+    {
+     "handled": true,
+     "action": {
+      "type": "cross-message-tool-update",
+      "updateType": "output-available",
+      "toolCallId": "earlier",
+      "output": 5,
+      "preliminary": true
+     }
+    },
+    {
+     "handled": true,
+     "action": {
+      "type": "cross-message-tool-update",
+      "updateType": "output-error",
+      "toolCallId": "earlier2",
+      "errorText": "bad"
+     }
+    },
+    {
+     "handled": true
+    }
+   ],
+   "message": {
+    "id": "m1",
+    "role": "assistant",
+    "parts": [
+     {
+      "type": "tool-search",
+      "toolCallId": "c1",
+      "toolName": "search",
+      "state": "output-available",
+      "input": {},
+      "approval": {
+       "id": "a"
+      },
+      "output": 1
+     }
+    ]
+   }
+  },
+  "errors": {
+   "results": [
+    {
+     "handled": true,
+     "action": {
+      "type": "error",
+      "error": "boom"
+     }
+    },
+    {
+     "handled": true,
+     "action": {
+      "type": "error",
+      "error": "{\"type\":\"error\"}"
+     }
+    }
+   ],
+   "message": {
+    "id": "m1",
+    "role": "assistant",
+    "parts": []
+   }
+  }
+ },
+ "reconciler": {
+  "merges_server_output_into_pending": {
+   "reconciled": [
+    {
+     "id": "u1",
+     "role": "user",
+     "parts": []
+    },
+    {
+     "id": "a1",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "tool-search",
+       "toolCallId": "c1",
+       "toolName": "search",
+       "state": "output-available",
+       "input": {
+        "q": 1
+       },
+       "output": "r"
+      }
+     ]
+    }
+   ],
+   "toolMergeIds": [
+    "u1",
+    "a1"
+   ],
+   "orphan": null
+  },
+  "merges_error_and_denial": {
+   "reconciled": [
+    {
+     "id": "a1",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "tool-search",
+       "toolCallId": "c1",
+       "toolName": "search",
+       "state": "output-error",
+       "input": {},
+       "errorText": "e"
+      },
+      {
+       "type": "tool-search",
+       "toolCallId": "c2",
+       "toolName": "search",
+       "state": "output-denied",
+       "input": {},
+       "approval": {
+        "id": "x",
+        "approved": false
+       }
+      },
+      {
+       "type": "tool-search",
+       "toolCallId": "c3",
+       "toolName": "search",
+       "state": "output-error",
+       "input": {},
+       "errorText": "client"
+      }
+     ]
+    }
+   ],
+   "toolMergeIds": [
+    "a1"
+   ],
+   "orphan": null
+  },
+  "adopts_server_id_by_content": {
+   "reconciled": [
+    {
+     "id": "u1",
+     "role": "user",
+     "parts": []
+    },
+    {
+     "id": "a1",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "text",
+       "text": "hi"
+      }
+     ]
+    }
+   ],
+   "toolMergeIds": [
+    "u1",
+    "temp"
+   ],
+   "orphan": null
+  },
+  "identical_contents_map_one_to_one": {
+   "reconciled": [
+    {
+     "id": "a1",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "text",
+       "text": "same"
+      }
+     ]
+    },
+    {
+     "id": "a2",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "text",
+       "text": "same"
+      }
+     ]
+    }
+   ],
+   "toolMergeIds": [
+    "t1",
+    "t2"
+   ],
+   "orphan": null
+  },
+  "adopts_server_id_by_tool_call": {
+   "reconciled": [
+    {
+     "id": "a1",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "tool-search",
+       "toolCallId": "c1",
+       "toolName": "search",
+       "state": "output-available",
+       "input": {
+        "q": 1
+       },
+       "output": "r"
+      }
+     ]
+    }
+   ],
+   "toolMergeIds": [
+    "a1"
+   ],
+   "orphan": null
+  },
+  "reordered_input_keys_are_the_same_call": {
+   "reconciled": [
+    {
+     "id": "a1",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "tool-search",
+       "toolCallId": "c1",
+       "toolName": "search",
+       "state": "output-available",
+       "input": {
+        "b": 2,
+        "a": 1
+       },
+       "output": 0
+      }
+     ]
+    }
+   ],
+   "toolMergeIds": [
+    "a1"
+   ],
+   "orphan": null
+  },
+  "different_tool_same_call_id_not_claimed": {
+   "reconciled": [
+    {
+     "id": "temp",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "tool-other",
+       "toolCallId": "c1",
+       "toolName": "other",
+       "state": "input-available",
+       "input": {
+        "q": 1
+       }
+      }
+     ]
+    }
+   ],
+   "toolMergeIds": [
+    "a1"
+   ],
+   "orphan": null
+  },
+  "drops_stale_echoed_copy": {
+   "reconciled": [
+    {
+     "id": "u1",
+     "role": "user",
+     "parts": []
+    },
+    {
+     "id": "a1",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "tool-search",
+       "toolCallId": "c1",
+       "toolName": "search",
+       "state": "output-available",
+       "input": {
+        "q": 1
+       },
+       "output": "r"
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "role": "user",
+     "parts": []
+    }
+   ],
+   "toolMergeIds": [
+    "u1",
+    "a1",
+    "a1",
+    "u2"
+   ],
+   "orphan": null
+  },
+  "keeps_copy_with_other_content": {
+   "reconciled": [
+    {
+     "id": "copy",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "tool-search",
+       "toolCallId": "c1",
+       "toolName": "search",
+       "state": "input-available",
+       "input": {
+        "q": 1
+       }
+      },
+      {
+       "type": "text",
+       "text": "extra"
+      }
+     ]
+    },
+    {
+     "id": "a1",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "tool-search",
+       "toolCallId": "c1",
+       "toolName": "search",
+       "state": "output-available",
+       "input": {
+        "q": 1
+       },
+       "output": "r"
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "role": "user",
+     "parts": []
+    }
+   ],
+   "toolMergeIds": [
+    "a1",
+    "a1",
+    "u2"
+   ],
+   "orphan": null
+  },
+  "no_server_messages": {
+   "reconciled": [
+    {
+     "id": "u1",
+     "role": "user",
+     "parts": []
+    },
+    {
+     "id": "a1",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "tool-search",
+       "toolCallId": "c1",
+       "toolName": "search",
+       "state": "input-available",
+       "input": {
+        "q": 1
+       }
+      }
+     ]
+    }
+   ],
+   "toolMergeIds": [
+    "u1",
+    "a1"
+   ],
+   "orphan": {
+    "id": "a1",
+    "role": "assistant",
+    "parts": [
+     {
+      "type": "tool-search",
+      "toolCallId": "c1",
+      "toolName": "search",
+      "state": "output-available",
+      "input": {
+       "q": 1
+      },
+      "output": "r"
+     },
+     {
+      "type": "tool-search",
+      "toolCallId": "c2",
+      "toolName": "search",
+      "state": "input-available",
+      "input": {}
+     }
+    ],
+    "metadata": {
+     "a": 1,
+     "b": 2
+    }
+   }
+  },
+  "orphan_without_incoming_metadata": {
+   "reconciled": [
+    {
+     "id": "u1",
+     "role": "user",
+     "parts": []
+    }
+   ],
+   "toolMergeIds": [
+    "u1"
+   ],
+   "orphan": {
+    "id": "a1",
+    "role": "assistant",
+    "parts": [
+     {
+      "type": "text",
+      "text": "a"
+     },
+     {
+      "type": "text",
+      "text": "b"
+     }
+    ],
+    "metadata": {
+     "a": 1
+    }
+   }
+  }
+ },
+ "toolState": {
+  "result": {
+   "applied": {
+    "parts": [
+     {
+      "type": "tool-search",
+      "toolCallId": "c1",
+      "toolName": "search",
+      "state": "output-available",
+      "input": {},
+      "output": {
+       "ok": true
+      },
+      "preliminary": false
+     }
+    ],
+    "index": 0
+   },
+   "awaits": [
+    true
+   ],
+   "incompleteBatch": false
+  },
+  "result_error_default": {
+   "applied": {
+    "parts": [
+     {
+      "type": "tool-search",
+      "toolCallId": "c1",
+      "toolName": "search",
+      "state": "output-error",
+      "input": {},
+      "approval": {
+       "id": "a"
+      },
+      "errorText": "Tool execution denied by user"
+     }
+    ],
+    "index": 0
+   },
+   "awaits": [
+    true
+   ],
+   "incompleteBatch": false
+  },
+  "result_wrong_state": {
+   "applied": null,
+   "awaits": [
+    false
+   ],
+   "incompleteBatch": false
+  },
+  "result_no_match": {
+   "applied": null,
+   "awaits": [
+    false
+   ],
+   "incompleteBatch": false
+  },
+  "cross_message_settled_stays": {
+   "applied": {
+    "parts": [
+     {
+      "type": "tool-search",
+      "toolCallId": "c1",
+      "toolName": "search",
+      "state": "output-error",
+      "input": {},
+      "errorText": "e"
+     }
+    ],
+    "index": 0
+   },
+   "awaits": [
+    false
+   ],
+   "incompleteBatch": false
+  },
+  "cross_message_preliminary": {
+   "applied": {
+    "parts": [
+     {
+      "type": "tool-search",
+      "toolCallId": "c1",
+      "toolName": "search",
+      "state": "output-available",
+      "output": 1,
+      "preliminary": true
+     }
+    ],
+    "index": 0
+   },
+   "awaits": [
+    false
+   ],
+   "incompleteBatch": false
+  },
+  "cross_message_error_default": {
+   "applied": {
+    "parts": [
+     {
+      "type": "tool-search",
+      "toolCallId": "c1",
+      "toolName": "search",
+      "state": "output-error",
+      "input": {},
+      "approval": {
+       "id": "a",
+       "approved": true
+      },
+      "errorText": "Tool execution failed"
+     }
+    ],
+    "index": 0
+   },
+   "awaits": [
+    false
+   ],
+   "incompleteBatch": false
+  },
+  "approval_yes": {
+   "applied": {
+    "parts": [
+     {
+      "type": "tool-search",
+      "toolCallId": "c1",
+      "toolName": "search",
+      "state": "approval-responded",
+      "input": {},
+      "approval": {
+       "id": "a1",
+       "approved": true
+      }
+     }
+    ],
+    "index": 0
+   },
+   "awaits": [
+    true
+   ],
+   "incompleteBatch": false
+  },
+  "approval_no_synthesized_id": {
+   "applied": {
+    "parts": [
+     {
+      "type": "tool-search",
+      "toolCallId": "c1",
+      "toolName": "search",
+      "state": "output-denied",
+      "input": {},
+      "approval": {
+       "id": "c1",
+       "approved": false
+      }
+     }
+    ],
+    "index": 0
+   },
+   "awaits": [
+    false
+   ],
+   "incompleteBatch": false
+  },
+  "paused_replaced": {
+   "applied": {
+    "parts": [
+     {
+      "type": "tool-search",
+      "toolCallId": "c1",
+      "toolName": "search",
+      "state": "output-available",
+      "input": {},
+      "output": {
+       "done": 1
+      },
+      "preliminary": false
+     }
+    ],
+    "index": 0
+   },
+   "awaits": [
+    false
+   ],
+   "incompleteBatch": false
+  },
+  "paused_other_execution": {
+   "applied": {
+    "parts": [
+     {
+      "type": "tool-search",
+      "toolCallId": "c1",
+      "toolName": "search",
+      "state": "output-available",
+      "input": {},
+      "output": {
+       "status": "paused",
+       "executionId": "e2"
+      }
+     }
+    ],
+    "index": 0
+   },
+   "awaits": [
+    false
+   ],
+   "incompleteBatch": false
+  },
+  "batch_incomplete": {
+   "applied": {
+    "parts": [
+     {
+      "type": "tool-search",
+      "toolCallId": "c1",
+      "toolName": "search",
+      "state": "output-available",
+      "input": {},
+      "output": 1
+     },
+     {
+      "type": "tool-search",
+      "toolCallId": "c2",
+      "toolName": "search",
+      "state": "output-available",
+      "input": {},
+      "output": 2,
+      "preliminary": false
+     },
+     {
+      "type": "dynamic-tool",
+      "toolCallId": "c3",
+      "toolName": "dyn",
+      "state": "input-available",
+      "input": {}
+     }
+    ],
+    "index": 1
+   },
+   "awaits": [
+    false,
+    false,
+    true
+   ],
+   "incompleteBatch": true
+  }
+ },
+ "repair": {
+  "interrupted_and_settled": {
+   "messages": [
+    {
+     "id": "a1",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "tool-search",
+       "toolCallId": "c1",
+       "toolName": "search",
+       "state": "output-error",
+       "input": {},
+       "errorText": "interrupted"
+      },
+      {
+       "type": "tool-search",
+       "toolCallId": "c2",
+       "toolName": "search",
+       "state": "output-available",
+       "input": {},
+       "output": 1
+      },
+      {
+       "type": "text",
+       "text": "x"
+      },
+      {
+       "type": "dynamic-tool",
+       "toolCallId": "c3",
+       "toolName": "d",
+       "state": "output-error",
+       "input": {},
+       "errorText": "interrupted"
+      }
+     ]
+    }
+   ],
+   "removedToolCalls": 2,
+   "normalizedInputs": 3,
+   "toolCallIds": [
+    "c1",
+    "c3"
+   ]
+  },
+  "approvals_option_off": {
+   "messages": [
+    {
+     "id": "a1",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "tool-search",
+       "toolCallId": "c1",
+       "toolName": "search",
+       "state": "approval-responded",
+       "input": {},
+       "approval": {
+        "id": "a",
+        "approved": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "role": "user",
+     "parts": []
+    }
+   ],
+   "removedToolCalls": 0,
+   "normalizedInputs": 0,
+   "toolCallIds": []
+  },
+  "approvals_option_on": {
+   "messages": [
+    {
+     "id": "a1",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "tool-search",
+       "toolCallId": "c1",
+       "toolName": "search",
+       "state": "output-error",
+       "input": {},
+       "approval": {
+        "id": "a",
+        "approved": true
+       },
+       "errorText": "interrupted"
+      },
+      {
+       "type": "tool-search",
+       "toolCallId": "c2",
+       "toolName": "search",
+       "state": "output-denied",
+       "input": {},
+       "approval": {
+        "id": "b",
+        "approved": false
+       }
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "role": "user",
+     "parts": []
+    },
+    {
+     "id": "a3",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "tool-search",
+       "toolCallId": "c3",
+       "toolName": "search",
+       "state": "approval-responded",
+       "input": {},
+       "approval": {
+        "id": "c",
+        "approved": true
+       }
+      }
+     ]
+    }
+   ],
+   "removedToolCalls": 2,
+   "normalizedInputs": 1,
+   "toolCallIds": [
+    "c1",
+    "c2"
+   ]
+  },
+  "result_field_counts_as_settled": {
+   "messages": [
+    {
+     "id": "a1",
+     "role": "assistant",
+     "parts": [
+      {
+       "type": "tool-search",
+       "toolCallId": "c1",
+       "toolName": "search",
+       "state": "input-available",
+       "input": {},
+       "result": 1
+      }
+     ]
+    }
+   ],
+   "removedToolCalls": 0,
+   "normalizedInputs": 0,
+   "toolCallIds": []
+  }
+ }
+}
