@@ -1,0 +1,11 @@
+{
+  "name": "reminders",
+  "main": "src/entry.py",
+  "compatibility_date": "2026-07-20",
+  "compatibility_flags": ["python_workers"],
+  "assets": { "directory": "./dist", "run_worker_first": ["/agents/*"] },
+  "durable_objects": {
+    "bindings": [{ "class_name": "Reminders", "name": "Reminders" }]
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["Reminders"] }]
+}
