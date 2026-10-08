@@ -1,9 +1,3 @@
-"""Python port of the Cloudflare Agents SDK.
-
-Re-exports each subpackage's public names (its ``__all__``). Keep ``__all__``
-below in step with the subpackages' (``tests/test_public_api.py`` checks it).
-"""
-
 from .agent import *
 from .chat import *
 from .core import *
@@ -18,6 +12,12 @@ from .state import *
 from .streams import *
 from .tasks import *
 from .websockets import *
+
+__title__ = "agents"
+__version__ = "0.1.1"
+__license__ = "MIT & Apache 2.0"
+__author__ = "justanotherbyte"
+__copyright__ = "Copyright 2026 justanotherbyte"
 
 __all__ = (
     "DEFAULT_MAX_CHUNK_BYTES",
