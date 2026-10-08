@@ -16,7 +16,7 @@ classifiers = [
 ]
 requires-python = ">=3.12"
 dependencies = ["typing-extensions>=4.12"]
-dynamic = ["version"]
+version = "0.1.1"
 
 [project.urls]
 Source = "https://github.com/justanotherbyte/agents-py"
