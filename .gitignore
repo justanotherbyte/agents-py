@@ -12,6 +12,7 @@ wheels/
 .pytest_cache/
 .ruff_cache/
 uv.lock
+.python-version
 
 # agents
 verify/
