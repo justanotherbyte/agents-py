@@ -1,13 +1,26 @@
 [project]
-name = "agents-py"
-version = "0.1.0"
-description = "Add your description here"
+name = "cf-agents"
+description = "Cloudflare Agents for Python Workers"
 readme = "README.md"
+license = "MIT & Apache 2.0"
 authors = [
     { name = "Viswa Marepalli", email = "reachvishm@gmail.com" }
 ]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: Implementation :: CPython",
+]
 requires-python = ">=3.12"
 dependencies = ["typing-extensions>=4.12"]
+dynamic = ["version"]
+
+[project.urls]
+Source = "https://github.com/justanotherbyte/agents-py"
+Documentation = "https://crosswind.viswa.space"
 
 [build-system]
 requires = ["uv_build>=0.12.19,<0.13.0"]
@@ -22,7 +35,7 @@ dev = ["pytest", "ruff", "ty", "workers-runtime-sdk"]
 [tool.ruff]
 line-length = 88
 target-version = "py312"
-extend-exclude = ["verify", ".design"]   # the verification Worker and design docs aren't SDK code
+extend-exclude = ["verify", "examples", ".design"] # the verification Worker, examples and design docs aren't SDK code
 
 [tool.ruff.lint]
 select = [
