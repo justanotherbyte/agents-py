@@ -11,11 +11,14 @@ Cloudflare Agents for Python Workers
 </sup>
 </p>
 
+
 [![PyPI - Version](https://img.shields.io/pypi/v/cf-agents.svg)](https://pypi.org/project/cf-agents)
 [![pypi](https://img.shields.io/pypi/pyversions/cf-agents.svg)](https://pypi.org/pypi/cf-agents)
 
 > [!note]
 > This is an unofficial SDK and not affiliated to Cloudflare. I worked on a port of the official [Agents SDK](https://agents.cloudflare.com) during my internship at Cloudflare. This project continues on my work there.
+>
+> This project is part of [Crosswind](https://crosswind.viswa.space).
 
 # Features
 - [x] Typed, `async`-first Python 3.12+
@@ -140,9 +143,9 @@ It can get tedious implementing similar patterns for chat agents over and over a
 
 `cf-agents` is a solo project right now. The scope is restricted, but feature-ful. Planned:
 
-- MCP
-- Channels
-- Integration with [Agent Traces](https://developers.cloudflare.com/agents/runtime/operations/observability/tracing/)
+- [ ] MCP
+- [ ] Channels
+- [ ] Integration with [Agent Traces](https://developers.cloudflare.com/agents/runtime/operations/observability/tracing/)
 - [ ] A harness/opinionated framework, similar to [Think](https://developers.cloudflare.com/agents/harnesses/think/)
 - [ ] Integrations with popular Agent libraries in the Python eco-system (such as [LangChain](https://www.langchain.com/langchain) or [CrewAI](https://crewai.com/))
 
