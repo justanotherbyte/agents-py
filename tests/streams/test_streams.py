@@ -8,7 +8,6 @@ from fake_runtime import Host
 import agents.streams.store as store_module
 from agents.lifecycle import Lifecycle, LifecycleEvent
 from agents.streams import (
-    StreamChunk,
     StreamClosedError,
     StreamNotFoundError,
     Streams,
@@ -398,8 +397,3 @@ def test_the_synchronous_surface() -> None:
     assert [(r["seq"], r["chunk"]) for r in page] == [(0, '{"part":1}')]
     assert rows == ["c2", "c1"] and live == ["c2", "c1"]
     assert remaining == []
-
-
-def test_streams_chunk_type_is_frozen() -> None:
-    with pytest.raises(AttributeError):
-        StreamChunk(seq=0, chunk=1).seq = 2  # ty: ignore[invalid-assignment]

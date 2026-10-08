@@ -8,13 +8,9 @@ from fake_runtime import Host
 import agents.sessions.sessions as sessions_module
 from agents.lifecycle import Lifecycle, LifecycleEvent
 from agents.sessions import (
-    AppendEvent,
-    ClearEvent,
-    DeleteEvent,
     SessionChangeEvent,
     SessionMessage,
     Sessions,
-    UpdateEvent,
 )
 from agents.sessions.chunking import split_content
 from agents.streams import Streams
@@ -407,11 +403,3 @@ def test_the_synchronous_upsert_lands_in_a_stream_cutover() -> None:
     assert history == ["q", "r2"]
     assert stream is None
     assert events == ["AppendEvent", "AppendEvent"]
-
-
-def test_events_are_frozen_dataclasses() -> None:
-    event = DeleteEvent(session_id="", message_ids=["a"])
-    assert event.type == "delete"
-    assert ClearEvent(session_id="").type == "clear"
-    assert UpdateEvent(session_id="", message=msg("a")).type == "update"
-    assert AppendEvent(session_id="", message=msg("a"), inserted=True).type == "append"

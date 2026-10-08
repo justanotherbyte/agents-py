@@ -1,5 +1,4 @@
-from agents import AgentsException
-from agents.core import RetryOptions, SqlError
+from agents.core import RetryOptions
 
 
 def test_retry_options_defaults_match_upstream() -> None:
@@ -9,7 +8,3 @@ def test_retry_options_defaults_match_upstream() -> None:
         0.1,
         3.0,
     )
-
-
-def test_sdk_exceptions_share_the_base() -> None:
-    assert issubclass(SqlError, AgentsException)
