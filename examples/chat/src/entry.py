@@ -1,14 +1,14 @@
 import json
+from collections.abc import AsyncIterator
 
-from workers import Response, WorkerEntrypoint
-
-from agents import AIChatAgent, TextPart, route_agent_request
+from workers import Request, Response, WorkerEntrypoint
+from agents import AIChatAgent, ChatMessageOptions, TextPart, route_agent_request
 
 MODEL = "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
 
 
 class Chat(AIChatAgent):
-    async def on_chat_message(self, options):
+    async def on_chat_message(self, options: ChatMessageOptions) -> AsyncIterator[str]:
         messages = [
             {
                 "role": m.role,
@@ -28,6 +28,6 @@ class Chat(AIChatAgent):
 
 
 class Default(WorkerEntrypoint):
-    async def fetch(self, request):
+    async def fetch(self, request: Request) -> Response:
         response = await route_agent_request(request, self.env)
         return response or Response("Not found", status=404)

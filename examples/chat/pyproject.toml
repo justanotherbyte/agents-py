@@ -2,10 +2,7 @@
 name = "chat"
 version = "0.1.0"
 requires-python = ">=3.13"
-dependencies = ["cf-agents"]
+dependencies = ["cf-agents>=0.1.0"]
 
 [dependency-groups]
 dev = ["workers-py"]
-
-[tool.uv.sources]
-cf-agents = { path = "../..", editable = false }
