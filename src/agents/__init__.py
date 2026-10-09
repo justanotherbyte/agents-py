@@ -14,8 +14,8 @@ from .tasks import *
 from .websockets import *
 
 __title__ = "agents"
-__version__ = "0.1.1"
-__license__ = "MIT & Apache 2.0"
+__version__ = "0.1.2"
+__license__ = "MIT OR Apache 2.0"
 __author__ = "justanotherbyte"
 __copyright__ = "Copyright 2026 justanotherbyte"
 
